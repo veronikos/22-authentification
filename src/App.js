@@ -6,11 +6,6 @@ import NoPathFound from "./components/404";
 import SignIn from "./components/SignIn";
 
 function App() {
-  // const adminUser = {
-  //   email: "admin@admin.com",
-  //   password: "a",
-  // };
-
   const [user, setUser] = useState({
     name: "",
     email: "",
@@ -96,7 +91,7 @@ function App() {
           </div>
         </Route>
         <Route path="/signUp">
-          <SignUp GetUser={GetUser} />
+          <SignUp GetUser={GetUser}/>
         </Route>
         <Route path="*">
           <NoPathFound></NoPathFound>

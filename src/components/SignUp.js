@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
+
 function SignUp({ GetUser }) {
   const [details, setDetails] = useState({ name: "", email: "", password: "", updatesViaEmail: false });
   const [submit, setSubmit] = useState({isSubmit: false})

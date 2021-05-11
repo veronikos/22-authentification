@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import classNames from 'classnames'
+import { redBorder, greenBorder } from "./Borders.module.css";
 
-function SignIn({ error, LoginIn }) {
+function SignIn({ error, LoginIn, isRightDetails }) {
   const [details, setDetails] = useState({
     email: "",
     password: "",
@@ -22,6 +24,7 @@ function SignIn({ error, LoginIn }) {
           <div className="form-group">
             <label htmlFor="email">Email:</label>
             <input
+            className={classNames({[greenBorder]: isRightDetails,})}
               type="email"
               name="email"
               id="email"
@@ -34,6 +37,7 @@ function SignIn({ error, LoginIn }) {
           <div className="form-group">
             <label htmlFor="password">Password:</label>
             <input
+            className={classNames({[greenBorder]: isRightDetails,})}
               type="password"
               name="password"
               id="password"
